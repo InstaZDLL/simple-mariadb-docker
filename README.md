@@ -25,13 +25,7 @@ The following environment variables can be set when running the Docker container
 You can run a container from this image using the following command:
 
 ```bash
-docker run -d --name my-mariadb \
-    -e MYSQL_ROOT_PASSWORD=myrootpassword \
-    -e MYSQL_DATABASE=mydatabase \
-    -e MYSQL_USER=myuser \
-    -e MYSQL_PASSWORD=mypassword \
-    -p 3306:3306 \
-    nayeonyny/mariadb:latest
+docker run -d --name some-mariadb -p 3306:3306 nayeonyny/mariadb:latest
 ```
 
 ## Author
