@@ -15,11 +15,10 @@ The following environment variables can be set when running the Docker container
 
 | ENV | Default value | Example | Description |
 | --- | ------------- | ------- | ----------- |
-| WORDPRESS\_DATABASE | wordpress | mydatabase | The name of the WordPress database. |
-| WORDPRESS\_DATABASE\_USER | wpuser | myuser | The username for the WordPress database. |
-| WORDPRESS\_DATABASE\_PASSWORD | wpuser | mypassword | The password for the WordPress database. |
-| WORDPRESS\_DATABASE\_HOST | localhost | example.com or 64.23.50.120 | The ip address of the WordPress database, can be private, public or you can use a domain. |
-| WORDPRESS\_HOST | localhost | example.com or 64.23.50.120 | The host of your WordPress site. If this is not set or is empty, it will default to <strong>localhost</strong>. This means that all resources will only be available on localhost. To make your WordPress site work online, change this variable to the public IP address or domain name of your host. |
+| MYSQL\_ROOT\_PASSWORD | Random password | O5Nz88BTPc6krzQ2gQuXJMOEroVKiY9po1LZSy1UQBk | By default, the root password is randomly generated. You can specify a specific root password if required. |
+| MYSQL\_DATABASE | wordpress | mydatabase | The name of the first database. |
+| MYSQL\_USER | wpuser | myuser | The username first user. |
+| MYSQL\_PASSWORD | wpuser | mypassword | The password for the first user. |
 
 ## How to Run the Container
 
