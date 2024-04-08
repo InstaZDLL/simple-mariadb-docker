@@ -2,7 +2,7 @@
 
 This repository contains a Dockerfile for building a MariaDB image based on Debian. The image is configured to run MariaDB as a non-root user for security reasons.
 
-**Info :** The mariadb in the container is a pre-build image so the user, password, database, are created by default for a wordpress.
+**Info :** The mariadb in the container is a pre-build image so the user, password and the database, are created by default for a wordpress.
 
 [ ![GitHub Release](https://img.shields.io/github/v/release/InstaZDLL/simple-mariadb-docker?style=for-the-badge)](https://img.shields.io/github/v/release/InstaZDLL/simple-mariadb-docker?sort=date&display_name=release&style=for-the-badge
 )  ![GitHub License](https://img.shields.io/github/license/InstaZDLL/simple-mariadb-docker?style=for-the-badge) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/InstaZDLL/simple-mariadb-docker?style=for-the-badge) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/InstaZDLL/simple-mariadb-docker/total?style=for-the-badge&color=%230080ff)
