@@ -12,10 +12,10 @@ LABEL authors="Ethan Besson" \
     documentation="https://hub.docker.com/_/mariadb/" \
     base.name="docker.io/library/debian:bookworm-slim" \
     licenses="AFL-3.0" \
-    source="https://github.com/MariaDB/mariadb-docker" \
+    source="https://github.com/InstaZDLL/simple-mysql-docker" \
     vendor="MariaDB Community" \
     version="1.0.0" \
-    url="https://github.com/MariaDB/mariadb-docker"
+    url="https://github.com/InstaZDLL/simple-mysql-docker"
 
 RUN apt-get update && \
     apt-get install -y mariadb-server openssl wget gosu && \
