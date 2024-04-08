@@ -10,6 +10,17 @@ The `docker-entrypoint.sh` script is used to initialize the database and create 
 
 Environment variables are used to configure the database. You can set the root password, database name, username, and password using the `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`, `MYSQL_USER`, and `MYSQL_PASSWORD` environment variables, respectively.
 
+## Environment Variables
+The following environment variables can be set when running the Docker container:
+
+| ENV | Default value | Example | Description |
+| --- | ------------- | ------- | ----------- |
+| WORDPRESS\_DATABASE | wordpress | mydatabase | The name of the WordPress database. |
+| WORDPRESS\_DATABASE\_USER | wpuser | myuser | The username for the WordPress database. |
+| WORDPRESS\_DATABASE\_PASSWORD | wpuser | mypassword | The password for the WordPress database. |
+| WORDPRESS\_DATABASE\_HOST | localhost | example.com or 64.23.50.120 | The ip address of the WordPress database, can be private, public or you can use a domain. |
+| WORDPRESS\_HOST | localhost | example.com or 64.23.50.120 | The host of your WordPress site. If this is not set or is empty, it will default to <strong>localhost</strong>. This means that all resources will only be available on localhost. To make your WordPress site work online, change this variable to the public IP address or domain name of your host. |
+
 ## How to Run the Container
 
 You can run a container from this image using the following command:
@@ -23,9 +34,6 @@ docker run -d --name my-mariadb \
     -p 3306:3306 \
     nayeonyny/mariadb:latest
 ```
-
-## Health Check
-The Dockerfile includes a health check that sends a request to http://localhost/ every 5 minutes. If the request is successful (i.e., the HTTP status code is 200), the container is considered healthy. If the request is not successful, the container is considered unhealthy.
 
 ## Author
 
