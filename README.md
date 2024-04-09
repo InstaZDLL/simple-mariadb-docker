@@ -20,7 +20,7 @@ The following environment variables can be set when running the Docker container
 
 | ENV | Default value | Example | Description |
 | --- | ------------- | ------- | ----------- |
-| MYSQL\_ROOT\_PASSWORD | [credentials.md](/.github/mysqld-credentials.md)  | myrootpassword | By default, the root password is randomly generated. You can specify a specific root password if required. |
+| MYSQL\_ROOT\_PASSWORD | [credentials.md](https://github.com/InstaZDLL/simple-mariadb-docker/blob/main/.github/mysqld-credentials.md)  | myrootpassword | By default, the root password is randomly generated. You can specify a specific root password if required. |
 | MYSQL\_DATABASE | wordpress | mydatabase | The name of the first database. |
 | MYSQL\_USER | wpuser | myuser | The username first user. |
 | MYSQL\_PASSWORD | wpuser | mypassword | The password for the first user. |
