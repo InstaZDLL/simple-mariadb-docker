@@ -19,7 +19,7 @@ LABEL authors="Ethan Besson" \
 RUN apt-get update && \
     apt-get install -y mariadb-server openssl wget gosu && \
     gosu nobody true && \ 
-    mkdir -p /var/lib/mysql /var/run/mysqld && \
+    mkdir -p /var/lib/mysql /var/run/mysqld /docker-entrypoint-initdb.d/ && \
     chown -R mysql:mysql /docker-entrypoint-initdb.d/ && \
     chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
     chmod 1777 /var/run/mysqld /var/lib/mysql && \
