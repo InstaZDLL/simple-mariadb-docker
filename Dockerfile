@@ -1,7 +1,6 @@
 FROM debian:bookworm-slim
 
 COPY config/ /etc/mysql/
-COPY --chmod=755 ./init.sql /docker-entrypoint-initdb.d/
 COPY --chmod=755 ./docker-entrypoint.sh /usr/local/bin/
 COPY --chmod=755 ./healthcheck.sh /usr/local/bin/healthcheck.sh
 
