@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
 COPY config/ /etc/mysql/
-COPY ./init.sql /docker-entrypoint-initdb.d/
+COPY --chmod=755 ./init.sql /docker-entrypoint-initdb.d/
 COPY --chmod=755 ./docker-entrypoint.sh /usr/local/bin/
 COPY --chmod=755 ./healthcheck.sh /usr/local/bin/healthcheck.sh
 
@@ -21,6 +21,7 @@ RUN apt-get update && \
     apt-get install -y mariadb-server openssl wget gosu && \
     gosu nobody true && \ 
     mkdir -p /var/lib/mysql /var/run/mysqld && \
+    chown -R mysql:mysql /docker-entrypoint-initdb.d/ && \
     chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
     chmod 1777 /var/run/mysqld /var/lib/mysql && \
     mysql_install_db --user=mysql --datadir=/var/lib/mysql  && \
