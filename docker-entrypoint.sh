@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-: "${MYSQL_ROOT_PASSWORD:=O5Nz88BTPc6krzQ2gQuXJMOEroVKiY9po1LZSy1UQBk}"
-: "${MYSQL_DATABASE:=wordpress}"
-: "${MYSQL_USER:=wpuser}"
-: "${MYSQL_PASSWORD:=wpuser}"
+: "${MYSQL_ROOT_PASSWORD:-O5Nz88BTPc6krzQ2gQuXJMOEroVKiY9po1LZSy1UQBk}"
+: "${MYSQL_DATABASE:-wordpress}"
+: "${MYSQL_USER:-wpuser}"
+: "${MYSQL_PASSWORD:-wpuser}"
 
 if [ ! -f /docker-entrypoint-initdb.d/flagfile ]; then
     # If the command executed is 'mariadbd'
