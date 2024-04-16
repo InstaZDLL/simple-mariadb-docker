@@ -13,7 +13,7 @@ LABEL authors="Ethan Besson" \
     licenses="AFL-3.0" \
     source="https://github.com/InstaZDLL/simple-mysql-docker" \
     vendor="MariaDB Community" \
-    version="1.0.0" \
+    version="1.0.1" \
     url="https://github.com/InstaZDLL/simple-mysql-docker"
 
 RUN apt-get update && \
